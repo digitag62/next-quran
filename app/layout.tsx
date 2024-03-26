@@ -17,11 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <section className="container">
-          <Header />
-          {children}
-          <ScrollUp />
-        </section>
+        <Header />
+        {children}
+        <ScrollUp />
       </body>
     </html>
   );

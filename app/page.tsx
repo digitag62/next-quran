@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="w-full flex items-center">
+    <div className="container w-full flex items-center">
       {/* Hero text */}
       <div className="w-full">
         <h1 className="font-bold text-3xl text-slate-800">
