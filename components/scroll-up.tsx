@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const ScrollUp = () => {
   const [showScroll, setShowScroll] = useState(false);
-  const isBrowser = () => typeof window !== 'undefined'; 
+  const isBrowser = () => typeof window !== "undefined";
 
   const scroll = () => {
     if (!isBrowser()) return;
@@ -34,7 +34,7 @@ const ScrollUp = () => {
   return (
     <div
       className={cn(
-        "fixed right-0 bottom-0 p-10",
+        "fixed right-0 bottom-0 p-10 opacity-50",
         showScroll ? "visible" : "invisible"
       )}
     >

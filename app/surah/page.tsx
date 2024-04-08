@@ -1,7 +1,7 @@
 import { SurahList } from "@/components/surah-list";
 
 const SurahPage = async () => {
-  const response = await fetch("https://quran-api-seven.vercel.app/surah");
+  const response = await fetch(`${process.env.QURAN_ENDPOINT}`);
   const surah = await response.json();
 
   return (
