@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="layout w-full h-[calc(100vh-80px)] flex items-center">
+    <div className="layout h-[calc(100vh-80px)] flex items-center">
       {/* Hero text */}
       <div className="w-full">
         <h1 className="font-bold text-3xl text-slate-800">
