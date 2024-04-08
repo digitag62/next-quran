@@ -73,4 +73,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  .layout {
+    max-width: 68rem;
+    @apply mx-auto w-11/12;
+  }
 }

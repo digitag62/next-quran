@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { MoveUp } from "lucide-react";
 import { Button } from "./ui/button";
@@ -8,20 +8,28 @@ import { cn } from "@/lib/utils";
 
 const ScrollUp = () => {
   const [showScroll, setShowScroll] = useState(false);
+  const isBrowser = () => typeof window !== 'undefined'; 
 
   const scroll = () => {
+    if (!isBrowser()) return;
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const checkScrollTop = () => {
     if (!showScroll && window.scrollY > 200) {
       setShowScroll(true);
-    } else if (showScroll && window.scrollY <= 200) {
+    } else {
       setShowScroll(false);
     }
   };
 
-  window.addEventListener("scroll", checkScrollTop);
+  useEffect(() => {
+    window.addEventListener("scroll", checkScrollTop);
+
+    return () => {
+      window.addEventListener("scroll", checkScrollTop);
+    };
+  }, []);
 
   return (
     <div
